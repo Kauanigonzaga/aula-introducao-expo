@@ -1,8 +1,13 @@
-import { registerRootComponent } from 'expo';
+import {View, Text} from 'react-native';
 
-import App from './App';
+import style from './style';
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+export default function Exemplo001() {
+    retur (
+        <View style={style.container}>
+        <Text style={style.titulo}>Primeiro Exemplo</Text>
+        <Text style={style.texto}>Introdução React Native com Expo</Text>
+        </View>
+
+    ); 
+    }removeEventListene
