@@ -18,16 +18,21 @@ export default function Exemplo03() {
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>Exemplo 3 </Text>
-      <Button 
-        onPress={() => {alert('Alguem tocou no botão')}}
-        title="Alerta"
-        color="deepskyblue"
-        accessibilityLabel='Botão de alerta'
-      /> 
-      <Text style={styles.texto}>{numero}</Text>
+    
+
+      <Text style={styles.txtBotao}>{numero}</Text>
       <TouchableOpacity style={styles.botao} onPress={() => handleIncrementar()}> 
       
-        <Text style={styles.txtBotao}>Incrementar número</Text>
+        <Text style={styles.txtBotao}>+</Text>
+        
+      </TouchableOpacity>
+
+
+      <Text style={styles.txtBotao}>{numero}</Text>
+
+      <TouchableOpacity style={styles.botao} onPress={() => handleIncrementar()}> 
+      
+        <Text style={styles.txtBotao}>-</Text>
         
       </TouchableOpacity>
     </View>

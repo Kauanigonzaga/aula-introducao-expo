@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
     padding: 8,
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center', // Centraliza verticalmente
     borderRadius: 20,
   },
   titulo: {
@@ -21,7 +20,7 @@ const styles = StyleSheet.create({
     padding: 8,
     width: '100%',
     height: 80,
-    textAlign: 'center', // Centraliza horizontalmente
+    textAlign: 'center',
     textAlignVertical: 'center',
     borderRadius: 20,
   },
@@ -40,12 +39,9 @@ const styles = StyleSheet.create({
   txtBotao: {
     color: 'pink',
     fontSize: RFPercentage(2),
-    borderRadius: 20,
-    marginTop: 30,
+    textAlign: 'center'
 
-}
-}
+}}
 );
-
 
 export default styles;
