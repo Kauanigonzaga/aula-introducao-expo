@@ -3,12 +3,9 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#dd8eddff',
-    padding: 8,
-    flex: 1,
+    flex: 1,  
+    backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center', // Centraliza verticalmente
-    borderRadius: 20,
   },
   titulo: {
     fontSize: RFPercentage(3),
@@ -24,26 +21,29 @@ const styles = StyleSheet.create({
     textAlign: 'center', // Centraliza horizontalmente
     textAlignVertical: 'center',
     borderRadius: 20,
-  },
-  txt: {
-    fontSize: RFPercentage(2.2),
-  },
-
-  botao: {
-    flexDirection: 'row',
-    backgroundColor: 'deepskyblue', 
-    borderRadius: 20,
-    padding: 10,  
-    alignItems: 'center',
-    marginTop: 10,
-  },  
-  txtBotao: {
+  }, 
+  input: {
+    borderWidth: 1,
+    borderColor: 'deepskyblue',
+    width: '90%',
+    height: 100,
+    padding : 10,
+},
+ txtBotao: {
     color: 'pink',
     fontSize: RFPercentage(2),
     borderRadius: 20,
     marginTop: 30,
-
-}
+  }, 
+  botao: {
+    backgroundColor: 'darkslateblue',
+    with: '75%',
+    borderRadius: RFPercentage(2),
+    padding: RFPercentage(1),
+    justifyContent: 'center',
+    alignItems: 'center', 
+    margin: RFPercentage(2),
+  }
 }
 );
 

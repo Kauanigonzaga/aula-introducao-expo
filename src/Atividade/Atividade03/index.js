@@ -18,11 +18,14 @@ export default function Atividade03() {
     //console.log(numero);
   }
 
+  function handleZerar() {
+    setNumero(0);
+
+  } 
   return (
     <View style={styles.container}>
       <Text style={styles.titulo}>atividade 3 </Text>
 
-    
       <TouchableOpacity style={styles.botao} onPress={() => handleIncrementar()}> 
       
         <Text style={styles.txtBotao}>     +     </Text>
@@ -36,6 +39,11 @@ export default function Atividade03() {
         <Text style={styles.txtBotao}>     -     </Text>
         </TouchableOpacity>
 
+      <TouchableOpacity style={styles.botao} onPress={() => handleZerar()}> 
+      
+        <Text style={styles.txtBotao}>     Zerar     </Text>
+        </TouchableOpacity>   
+        
     </View>
   );
 }
