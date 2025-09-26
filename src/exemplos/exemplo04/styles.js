@@ -43,7 +43,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center', 
     margin: RFPercentage(2),
-  }
+  }, 
+  botao: {
+    flexDirection: 'row',
+    backgroundColor: 'deepskyblue', 
+    borderRadius: 20,
+    padding: 10,  
+    alignItems: 'center',
+    marginTop: 10,
+  },  
+  txtBotao: {
+    color: 'pink',
+    fontSize: RFPercentage(2),
+    borderRadius: 20,
+    marginTop: 7,
+
+}
 }
 );
 
