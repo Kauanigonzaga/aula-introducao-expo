@@ -1,5 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
+import * as React from 'react';
+
+
 
 import Constants from 'expo-constants';
 
@@ -8,6 +11,7 @@ import Exemplo01 from './src/exemplos/Exemplo01';
 import Exemplo02 from './src/exemplos/exemplo02';
 import Exemplo03 from './src/exemplos/exemplo3';
 import Exemplo04 from './src/exemplos/exemplo04';
+import Exemplo05 from './src/exemplos/exemplo05';
 
 
 //ATIVIDADES
@@ -17,7 +21,7 @@ import Atividade03 from './src/Atividade/Atividade03';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Exemplo04/>
+      <Exemplo05/>
       <StatusBar style="light" />
     </View>
   );
