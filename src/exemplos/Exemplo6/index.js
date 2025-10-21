@@ -4,17 +4,39 @@ import { useState } from 'react';
 import styles from './styles';
 
 export default function Exemplo6() {
+    const [massa, setMassa] = useState(0);
+    const [altura, setAltura] = useState(0);
+    const [resultado, setResultado] = useState(0);
+
+    function Calcular() {
+        const valor = massa / (altura * altura);
+        setResultado (valor); 
+    }
     return (
         <View style= {styles.container}>
             <Text style={styles.paragraph} > Exemplo 6 </Text>
-            <View style={styles.esntradaImc} >
-                <TextInput placeholder='Massa (kg)' placeholderTextColor='#34495e' keyboardType= 'numeric' styles={styles.input} /> 
-                <TextInput placeholder='Altura (m)' placeholderTextColor='#34495e' keyboardType= 'numeric' styles={styles.input} />
+            <View style={styles.entradaImc} >
+                <TextInput 
+                placeholder='Massa' 
+                placeholderTextColor='#34495e' 
+                keyboardType= 'numeric' 
+                style={styles.input} 
+                onChangeText= {(entrada) => setMassa (entrada)} />
+
+                <TextInput placeholder='Altura'
+                placeholderTextColor='#34495e' 
+                keyboardType= 'numeric' 
+                style={styles.input} 
+                onChangeText= {(entrada) => setAltura (entrada)}/>
+            
             </View>
-            <TouchableOpacity style={styles.button} onPress={ () => {}} >
+
+            <TouchableOpacity style={styles.button} onPress={ () => Calcular ()} >
                 <Text style={styles.buttonText} > Calcular IMC </Text>
             </TouchableOpacity>
-            </View>
+            <Text style={styles.resultados} > {resultado.toFixed(2)} </Text>
+        
+        </View>
 
     );
 }
