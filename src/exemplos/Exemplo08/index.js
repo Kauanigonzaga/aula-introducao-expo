@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {View, Text, FlatList} from 'react-native'; 
 import uuid from 'react-native-uuid';
 import ItemLista from './ItemLista';
-
+import AdicionarItem from './AdicionarItem';
 import styles from './styles';
 
 export default function Exemplo08() {   
@@ -22,14 +22,23 @@ export default function Exemplo08() {
             return prevItems.filter(item => item.id !== id);
         }); 
     }
+
+    function addItems(text) {
+        setItems(prevItems => {
+            return [{id: uuid.v4(), text}, ...prevItems];
+        });     
+    }
+
     
     return(
         <View style={styles.container}> 
             <Text style= {styles.titulo}> Exemplo 08 </Text>
             <Text style= {styles.cabecalho}> LISTA DE COMPRAS </Text>
+            <AdicionarItem addItems={addItems} /> 
             <FlatList
                 data={items}
-                renderItem= {({item}) => <ItemLista> {item.text} </ItemLista>} 
+                renderItem= {({item}) => <ItemLista id={item.id} deleteItem={deleteItem}> 
+                {item.text} </ItemLista>} 
                 style={styles.lista} />
              </View>
     ); 
