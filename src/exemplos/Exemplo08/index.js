@@ -1,8 +1,9 @@
 import {useState} from 'react'; 
 import {View, Text, FlatList} from 'react-native'; 
 import uuid from 'react-native-uuid';
+import AdicionarItens from './adicionarItens';
 import ItemLista from './ItemLista';
-import AdicionarItem from './AdicionarItem';
+
 import styles from './styles';
 
 export default function Exemplo08() {   
@@ -34,7 +35,7 @@ export default function Exemplo08() {
         <View style={styles.container}> 
             <Text style= {styles.titulo}> Exemplo 08 </Text>
             <Text style= {styles.cabecalho}> LISTA DE COMPRAS </Text>
-            <AdicionarItem addItems={addItems} /> 
+            <AdicionarItens addItems={addItems} /> 
             <FlatList
                 data={items}
                 renderItem= {({item}) => <ItemLista id={item.id} deleteItem={deleteItem}> 
