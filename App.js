@@ -2,18 +2,11 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
 import * as React from 'react';
 
+import { NavigationContainer } from '@react-navigation/native';
+import StackExemplos from './src/navegacao/stackExemplos';
 
 
 import Constants from 'expo-constants';
-
-//EXEMPLOS 
-import Exemplo01 from './src/exemplos/Exemplo01';     
-import Exemplo02 from './src/exemplos/exemplo02';
-import Exemplo03 from './src/exemplos/exemplo3';
-import Exemplo04 from './src/exemplos/exemplo04';
-import Exemplo05 from './src/exemplos/exemplo05';
-import Exemplo6 from './src/exemplos/Exemplo6';
-import Exemplo08 from './src/exemplos/Exemplo08';
 
 import Revisao09 from './src/revisao/rev09';
 
@@ -28,7 +21,9 @@ import Revisao09 from './src/revisao/rev09';
 export default function App() {
   return (
     <View style={styles.container}>
-      <Revisao09/>
+     <NavigationContainer>
+<StackExemplos />
+     </NavigationContainer>
       <StatusBar style="light" />
     </View>
   );
