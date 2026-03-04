@@ -1,2 +1,2 @@
-# aula-introducao-expo
-Aula de introdução ao Expo com  React Name 
+# expo-1des-125
+Aula de introdução ao Expo com React Native
